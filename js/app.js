@@ -1,5 +1,4 @@
 // Tu código aquí
-(function() {
 const form = document.querySelector('#message-form')
 
 form.addEventListener('submit', function(e){
@@ -9,9 +8,9 @@ form.addEventListener('submit', function(e){
     var alertMessage = document.querySelector(".feedback")
     var displayMessage = document.querySelector(".message-content")
     
-    if (inputMessage === '') {
+    if (inputMessage.value === '') {
         alertMessage.classList.add('show')
-        //setTimeout(function(){alertMessage.classList.remove('show')}, 2000)
+        setTimeout(function(){alertMessage.classList.remove('show')}, 2000)
     }
     else{
         displayMessage.textContent = inputMessage.value
@@ -20,6 +19,6 @@ form.addEventListener('submit', function(e){
     }
     
 })
-})()
+
 
 
